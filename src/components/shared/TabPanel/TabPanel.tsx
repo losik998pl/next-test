@@ -6,6 +6,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import fileStyles from './TabPanel.module.scss'
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -40,11 +42,11 @@ function a11yProps(index: number) {
 }
 
 interface TabsProps {
-    styles?: { [key: string]: string };
-    tabs: string[];
-  }
+  styles?: { [key: string]: string };
+  tabs: string[];
+}
 
-export default function TabPanel({tabs, styles}: TabsProps) {
+export default function TabPanel({ tabs, styles }: TabsProps) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -53,9 +55,9 @@ export default function TabPanel({tabs, styles}: TabsProps) {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange}>
-        {tabs.map((tabName, index) => (<Tab label={tabName} key={tabName} {...a11yProps(index)} />))}
+      <Box>
+        <Tabs value={value} onChange={handleChange} className={fileStyles.tabs}>
+          {tabs.map((tabName, index) => (<Tab className={fileStyles.tab} label={tabName} key={tabName} {...a11yProps(index)} />))}
         </Tabs>
       </Box>
     </Box>

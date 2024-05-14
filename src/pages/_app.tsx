@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps}/>
     </ThemeProvider>
   );
 }
-
+ 
 export default MyApp;

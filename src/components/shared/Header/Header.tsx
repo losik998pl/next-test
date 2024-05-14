@@ -12,7 +12,7 @@ import TabPanel from "../TabPanel/TabPanel";
 const Header = () => {
   return (
     <AppBar position="static" elevation={0} component="header" classes={{ root: styles.appBar }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style={{padding: 0}}>
         <Toolbar disableGutters className={styles.toolbar}>
           <Link href="/" passHref>
             <div className={styles.logoContainer}>
@@ -24,7 +24,7 @@ const Header = () => {
               height={72}
             //   priority
             />
-            <div>
+            <div className={styles.logoTextBox}>
             <Image
               src="/jedi_logo.png"
               alt="Jedi Logo"
@@ -33,7 +33,7 @@ const Header = () => {
               height={38}
             //   priority
             />
-            <Typography variant="h6" component="div">
+            <Typography variant="h6" component="p" className={styles.logoTypography}>
               May the Joomla be with you
             </Typography>
             </div>
