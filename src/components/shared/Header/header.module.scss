@@ -1,0 +1,45 @@
+.appBar {
+    width: 1300px;
+    height: 112px;
+    background-color: #FFFFFF;
+    color: #212529;
+    box-shadow: 0 5px 2px -2px rgba(160, 160, 160, 0.25);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .toolbar {
+        justify-content: space-between;
+    }
+  }
+  
+  .logoContainer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoX {
+    margin-right: 10px;
+  }
+  
+  .logoJedi {  }
+  
+  .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+//   @media (max-width: 1300px) {
+//     .header {
+//       width: 100%;
+//     }
+//   }
+  
+//   @media (max-width: 600px) {
+//     .navContainer {
+//       display: none; // Скрытие навигации на маленьких экранах
+//     }
+//   }
+  

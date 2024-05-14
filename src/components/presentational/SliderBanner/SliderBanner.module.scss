@@ -1,0 +1,53 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+  
+    .slick-slide {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    div {
+        height: auto;
+    }
+
+    img {
+        height: 611px;
+    }
+  }
+  
+  .arrowbutton {
+    width: 50px; /* Установите нужную ширину */
+    height: 50px; /* Установите нужную высоту */
+    position: absolute; /* Абсолютное позиционирование для позиционирования на слайдере */
+    top: 50%; /* Позиционирование по вертикали */
+    left: 10px; /* Отступ слева */
+    cursor: pointer;
+  }
+  
+  .arrowbutton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px; /* Длина палочки */
+    height: 3px; /* Толщина палочки */
+    background-color: white;
+    transform: translateY(-50%);
+  }
+  
+  .arrowbutton::after {
+    content: "";
+    position: absolute;
+    left: 30px; /* Начало треугольника от левого края */
+    top: 50%;
+    border-left: 10px solid white; /* Размер треугольника */
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    transform: translateY(-50%);
+  }
+  
