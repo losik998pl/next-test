@@ -45,12 +45,14 @@ const SliderBanner: React.FC = () => {
   return (
     <div className={styles.slider}>
       <Slider {...settings}>
-        <div>
+      <Image src="/banner0.png" alt="Banner 1" width={1300} objectFit='cover' height={611}/>
+      <Image src="/banner0_negate.png" alt="Banner 2" width={1300} objectFit='cover' height={611}/>
+        {/* <div>
           <Image src="/banner0.png" alt="Banner 1" width={1300} objectFit='cover' height={611}/>
         </div>
         <div>
           <Image src="/banner0_negate.png" alt="Banner 2" width={1300} objectFit='cover' height={611}/>
-        </div>
+        </div> */}
       </Slider>
     </div>
   );

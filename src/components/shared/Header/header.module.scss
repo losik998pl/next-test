@@ -1,45 +1,82 @@
 .appBar {
-    width: 1300px;
-    height: 112px;
-    background-color: #FFFFFF;
-    color: #212529;
-    box-shadow: 0 5px 2px -2px rgba(160, 160, 160, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  height: 112px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 2px -2px rgba(160, 160, 160, 0.25);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: fixed;
+  z-index: 10;
+
+  .toolbar {
+    justify-content: space-between;
+    padding: 0 78px;
+    max-width: 1300px;
     margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+.logoContainer {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+  .logoTextBox {
     display: flex;
-    align-items: center;
-    padding: 0 20px;
-    .toolbar {
-        justify-content: space-between;
+    flex-direction: column;
+
+    .logoTypography {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: rgba(33, 37, 41, 1);
+      text-decoration: none;
+      margin: 0;
     }
   }
-  
-  .logoContainer {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .logoX {
-    margin-right: 10px;
-  }
-  
-  .logoJedi {  }
-  
-  .navContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
+}
+
+.logoX {
+  margin-right: 10px;
+}
+
+.logoJedi {}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // div[role="tablist"] {
+  //   display: flex;
+  //   align-items: center;
+
+  //   button {
+  //     font-size: 13px;
+  //     font-weight: 700;
+  //     line-height: 19.5px;
+  //     letter-spacing: 0.699999988079071px;
+  //     color: rgba(0, 0, 0, 1);
+  //     padding: 3px 15px;
+  //     box-sizing: border-box;
+  //     height: fit-content;
+  //   }
+  // }
+}
+
 //   @media (max-width: 1300px) {
 //     .header {
 //       width: 100%;
 //     }
 //   }
-  
+
 //   @media (max-width: 600px) {
 //     .navContainer {
 //       display: none; // Скрытие навигации на маленьких экранах
 //     }
 //   }
-  

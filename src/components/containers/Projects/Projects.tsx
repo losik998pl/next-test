@@ -6,14 +6,16 @@ import TabPanel from '@/components/shared/TabPanel/TabPanel';
 const categories = ["All", "Business", "Creative", "Portfolio", "Blog", "Infrastructure", "Industrial", "Other"];
 const projects = ["/project0.png", "/project1.png", "/project2.png"];
 
+import styles from './Projects.module.scss'
+
 const Projects: React.FC = () => {
     return (
-        <Box sx={{ textAlign: 'center', py: 4 }}>
-            <Typography variant="h4" component="h2" gutterBottom>
+        <Box sx={{ textAlign: 'center', paddingTop: 9, alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+            <Typography variant="h4" component="h2" gutterBottom className={styles.heading}>
                 Our Projects
             </Typography>
-            <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
-                Check out other themes based on JEDI
+            <Typography variant="subtitle1" className={styles.subtitle}>
+                Check out other themes based on <span>JEDI</span>
             </Typography>
             <TabPanel tabs={categories}/>
             {/* <Box sx={{ mt: 2, mb: 4, display: 'flex', justifyContent: 'center' }}>
@@ -31,9 +33,9 @@ const Projects: React.FC = () => {
                     </Button>
                 ))}
             </Box> */}
-            <Grid container spacing={3}>
-                {projects.map((project) => <Image src={project} alt={project} key={project} width={432} height={332}/>)}
-            </Grid>
+            <Box gap={0} sx={{marginTop: 6}}>
+                {projects.map((project) => <Image src={project} alt={project} key={project} width={432} height={332} className={styles.image}/>)}
+            </Box>
         </Box>
     );
 };

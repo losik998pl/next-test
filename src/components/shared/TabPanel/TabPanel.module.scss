@@ -1,0 +1,21 @@
+.tabs {
+  button[aria-selected="true"] {
+    color: rgba(0, 0, 0, 1);
+  }
+  min-height: 30px;
+
+  & > div > span {
+    background-color: rgba(23, 191, 191, 1);
+  }
+}
+
+.tab {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19.5px;
+  letter-spacing: 0.699999988079071px;
+  color: rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  padding: 3px 15px;
+  min-height: 30px;
+}
