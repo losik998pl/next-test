@@ -1,11 +1,9 @@
-import Image from "next/image";
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import styles from './header.module.scss';
 import TabPanel from "../TabPanel/TabPanel";
 import Logo from "../Logo/Logo";
@@ -13,7 +11,11 @@ import Logo from "../Logo/Logo";
 const Header = () => {
   return (
     <AppBar position="static" elevation={0} component="header" classes={{ root: styles.appBar }}>
-      <Container maxWidth="xl" style={{padding: 0}}>
+      <Container maxWidth="xl" style={{ padding: 0 }}>
+        <Box component={'div'} className={styles.mobileBox}>
+          <Image src="/burgerIcon.svg" alt="My Icon" width={52} height={56} />
+          <Typography className={styles.burgerMenuSignature} component={'p'}>Features</Typography>
+        </Box>
         <Toolbar disableGutters className={styles.toolbar}>
           <Link href="/" passHref>
             <Logo mode="light"/>

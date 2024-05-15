@@ -3,13 +3,20 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import styles from "./Logo.module.scss";
 
+import cn from 'classnames'
+
 const DARK_MODE = "dark";
 const LIGHT_MODE = "light";
 
+const ROW = "row"
+const COLUMN = "column"
+
 type Mode = typeof DARK_MODE | typeof LIGHT_MODE;
+type Direction = typeof ROW | typeof COLUMN;
 
 interface LogoProps {
   mode: Mode;
+  direction?: Direction
 }
 
 const getImagePath = (path: string, mode: Mode) =>
@@ -17,9 +24,9 @@ const getImagePath = (path: string, mode: Mode) =>
     ? path.replace(/\.(png|svg|jpg)$/i, `_dark.${path.slice(-3)}`)
     : path;
 
-const Logo = ({ mode }: LogoProps) => {
+const Logo = ({ mode, direction = 'row' }: LogoProps) => {
   return (
-    <div className={styles.logoContainer}>
+    <div className={cn(styles.logoContainer, {[styles.logoContainerRow]: direction === 'row'}, {[styles.logoContainerColumn]: direction === 'column'})}>
       <Image
         src={getImagePath('/logo.png', mode)}
         alt="Logo X"

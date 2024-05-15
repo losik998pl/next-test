@@ -10,7 +10,7 @@ import styles from './Projects.module.scss'
 
 const Projects: React.FC = () => {
     return (
-        <Box sx={{ textAlign: 'center', paddingTop: 9, alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+        <Box component={'div'} sx={{ textAlign: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }} className={styles.container}>
             <Typography variant="h4" component="h2" gutterBottom className={styles.heading}>
                 Our Projects
             </Typography>

@@ -1,4 +1,6 @@
 .slider {
+  display: block;
+  height: fit-content;
     position: relative;
     width: 100%;
     height: auto;
@@ -54,5 +56,11 @@
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
     transform: translateY(-50%);
+  }
+
+  @media (max-width: 768px) {
+    .slider {
+      padding: 0;
+    }
   }
   
