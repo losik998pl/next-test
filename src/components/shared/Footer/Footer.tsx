@@ -4,6 +4,7 @@ import styles from "./Footer.module.scss";
 import { Facebook, Twitter, Google, LinkedIn } from "@mui/icons-material";
 import Logo from "../Logo/Logo";
 import Image from "next/image";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Footer: React.FC = () => {
   return (
@@ -52,17 +53,9 @@ const Footer: React.FC = () => {
           </Typography>
           <Box className={styles.blog}>
             <Box className={styles.blogItem}>
-              <Image width={62} height={62} src="/blog0.png" alt="Blog" />
-              <Typography>Believe in the Business</Typography>
-            </Box>
-            <Box className={styles.blogItem}>
-              <Image width={62} height={62} src="/blog1.png" alt="Blog" />
-              <Typography>Color solutions for the office</Typography>
-            </Box>
-            <Box className={styles.blogItem}>
-              <Image width={62} height={62} src="/blog2.png" alt="Blog" />
+            <Image width={62} height={62} src="/blog0.png" alt="Blog" />
               <Box className={styles.blogInfo}>
-                <Box sx={{ display: 'flex'}}>
+                <Box>
                   <Image
                     priority
                     src="/arrow.svg"
@@ -70,7 +63,39 @@ const Footer: React.FC = () => {
                     width={13}
                     alt="arrow"
                   />
-                  <Typography>04/30/2014</Typography>
+                  <Typography className={styles.blogInfoDate}>04/30/2014</Typography>
+                </Box>
+                <Typography>Believe in the Business</Typography>
+              </Box>
+            </Box>
+            <Box className={styles.blogItem}>
+            <Image width={62} height={62} src="/blog1.png" alt="Blog" />
+              <Box className={styles.blogInfo}>
+                <Box>
+                  <Image
+                    priority
+                    src="/arrow.svg"
+                    height={13}
+                    width={13}
+                    alt="arrow"
+                  />
+                  <Typography className={styles.blogInfoDate}>05/01/2014</Typography>
+                </Box>
+                <Typography>Color solutions for the office</Typography>
+              </Box>
+            </Box>
+            <Box className={styles.blogItem}>
+              <Image width={62} height={62} src="/blog2.png" alt="Blog" />
+              <Box className={styles.blogInfo}>
+                <Box>
+                  <Image
+                    priority
+                    src="/arrow.svg"
+                    height={13}
+                    width={13}
+                    alt="arrow"
+                  />
+                  <Typography className={styles.blogInfoDate}>04/28/2014</Typography>
                 </Box>
                 <Typography>Anti-stress Joke Therapy</Typography>
               </Box>
@@ -78,32 +103,7 @@ const Footer: React.FC = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6" gutterBottom>
-            Contact Us
-          </Typography>
-          <TextField
-            label="Your Name"
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Your Email"
-            variant="outlined"
-            fullWidth
-            margin="dense"
-          />
-          <TextField
-            label="Message"
-            variant="outlined"
-            fullWidth
-            multiline
-            rows={4}
-            margin="dense"
-          />
-          <Button variant="contained" color="primary" fullWidth>
-            Submit
-          </Button>
+          <ContactForm />
         </Grid>
       </Grid>
     </Box>
