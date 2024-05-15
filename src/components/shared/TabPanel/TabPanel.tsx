@@ -56,7 +56,7 @@ export default function TabPanel({ tabs, styles }: TabsProps) {
   return (
     <Box sx={{ width: '100%' }}>
       <Box>
-        <Tabs value={value} onChange={handleChange} className={fileStyles.tabs}>
+        <Tabs value={value} onChange={handleChange} className={fileStyles.tabs} centered>
           {tabs.map((tabName, index) => (<Tab className={fileStyles.tab} label={tabName} key={tabName} {...a11yProps(index)} />))}
         </Tabs>
       </Box>

@@ -5,9 +5,9 @@ import { features } from "./constants";
 
 const FeaturesGrid: React.FC = () => {
   return (
-    <Grid container>
+    <Grid container spacing={3}>
       {features.map((feature, index) => (
-        <Grid item key={index} xs={12} sm={6} md={4}>
+        <Grid item key={index} xs={12} sm={4} md={3}>
           <FeatureCard
             title={feature.title}
             description={feature.description}

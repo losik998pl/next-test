@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 import styles from './header.module.scss';
 import TabPanel from "../TabPanel/TabPanel";
+import Logo from "../Logo/Logo";
 
 const Header = () => {
   return (
@@ -15,7 +16,8 @@ const Header = () => {
       <Container maxWidth="xl" style={{padding: 0}}>
         <Toolbar disableGutters className={styles.toolbar}>
           <Link href="/" passHref>
-            <div className={styles.logoContainer}>
+            <Logo mode="light"/>
+            {/* <div className={styles.logoContainer}>
             <Image
               src="/logo.png"
               alt="Logo X"
@@ -37,7 +39,7 @@ const Header = () => {
               May the Joomla be with you
             </Typography>
             </div>
-            </div>
+            </div> */}
           </Link>
           <nav className={styles.navContainer}>
             <TabPanel tabs={['Home', 'Features', 'Portfolio', 'Blog']} />

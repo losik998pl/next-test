@@ -1,12 +1,36 @@
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 40px 84px 95px;
+    
+    .info {
+        display: flex;
+        justify-content: space-between;
+
+        .infoItem {
+            flex: 1;
+            max-width: 145px;
+        }
+    }
+
     .socialMedia {
         display: flex;
         a {
             color: #fff;
             margin-right: 10px;
+        }
+    }
+
+    .blog {
+        .blogItem {
+            display: flex;
+            margin: 20px;
+            margin-left: 0;
+
+            .blogInfo {
+                align-content: center;
+                margin-left: 20px;
+            }
         }
     }
 }

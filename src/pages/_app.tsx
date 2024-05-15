@@ -14,12 +14,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-<<<<<<< HEAD
-      <Component {...pageProps} />
-      <Footer />
-=======
       <Component {...pageProps}/>
->>>>>>> 42f021af8e53afd2bf3378c1b1e543c56fabde12
+      <Footer />
     </ThemeProvider>
   );
 }

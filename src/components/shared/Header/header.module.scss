@@ -18,6 +18,10 @@
     max-width: 1300px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -44,8 +48,6 @@
 .logoX {
   margin-right: 10px;
 }
-
-.logoJedi {}
 
 .navContainer {
   display: flex;
