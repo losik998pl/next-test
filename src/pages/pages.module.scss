@@ -3,6 +3,11 @@
   padding: 112px 0 0 0;
   max-width: 1300px;
   margin: 0 auto;
+
+  & > div:first-of-type {
+    display: none;
+    padding: 20px 0 34px;
+  }
 }
 
 @media (max-width: 1332px) {
@@ -14,6 +19,10 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 112px 0 0 0;
+    padding: 56px 0 0 0;
+
+    & > div:first-of-type {
+      display: flex;
+    }
   }
 }

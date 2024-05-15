@@ -71,6 +71,46 @@
   // }
 }
 
+.mobileBox {
+  display: none;
+  align-items: center;
+}
+
+.burgerMenuSignature {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32.5px;
+  margin: 0;
+  color: rgba(33, 37, 41, 1);
+}
+
+@media (max-width: 880px) {
+  .appBar {
+    .toolbar {
+      padding: 0 42px;
+      max-width: 1300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .appBar {
+    height: 56px;
+
+    .toolbar {
+      display: none;
+    }
+  }
+
+  .mobileBox {
+    display: flex;
+
+    & img {
+      cursor: pointer;
+    }
+  }
+}
+
 //   @media (max-width: 1300px) {
 //     .header {
 //       width: 100%;

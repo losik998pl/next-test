@@ -1,27 +1,47 @@
 .logoContainer {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-  
-    .logoTextBox {
-      display: flex;
-      flex-direction: column;
-  
-      .logoTypography {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        text-decoration: none;
-        margin: 0;
-      }
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 
-      .light {
-        color: rgba(33, 37, 41, 1);
-      }
+  &Row {
+    flex-direction: row;
+  }
 
-      .dark {
-        color: #fff;
+  &Column {
+    flex-direction: column;
+    gap: 6px;
+
+    &>div {
+      align-items: center;
+      gap: 6px;
+
+      &>p {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        line-height: 18px !important;
+        letter-spacing: -0.5px !important;
       }
     }
   }
-  
+
+  .logoTextBox {
+    display: flex;
+    flex-direction: column;
+
+    .logoTypography {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-decoration: none;
+      margin: 0;
+    }
+
+    .light {
+      color: rgba(33, 37, 41, 1);
+    }
+
+    .dark {
+      color: #fff;
+    }
+  }
+}
