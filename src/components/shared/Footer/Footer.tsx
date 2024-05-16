@@ -6,7 +6,11 @@ import Logo from "../Logo/Logo";
 import Image from "next/image";
 import ContactForm from "../ContactForm/ContactForm";
 
+import { format } from "date-fns";
+
 const Footer: React.FC = () => {
+  const currentYear = format(new Date(), 'yyyy')
+
   return (
     <Box className={styles.footer}>
       <Grid container className={styles.gridContainer}>
@@ -109,20 +113,25 @@ const Footer: React.FC = () => {
       <Box component={'div'} className={styles.mobileBox}>
         <Logo mode={"dark"} direction={'column'} />
         <Box component={'div'} className={styles.adressBox}>
-          <Typography variant="h6">
+          <Typography component={'h6'}>
             Address:
           </Typography>
-          <Typography>
+          <Typography component={'p'}>
             28 Jackson Btvd Ste
           </Typography>
-          <Typography>
+          <Typography component={'p'}>
             1020 Chicago
           </Typography>
-          <Typography>
+          <Typography component={'p'}>
             IL 60604-2340
           </Typography>
         </Box>
       </Box>
+      <Box component={'div'} className={styles.policy}>
+          <Typography component={'p'}>
+            Jedi © {currentYear}. <Link>Privacy Policy</Link>
+          </Typography>
+        </Box>
     </Box>
   );
 };

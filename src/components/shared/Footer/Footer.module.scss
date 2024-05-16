@@ -5,11 +5,46 @@
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+    position: relative;
+
+    .policy {
+        position: absolute;
+        bottom: 24px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+
+        & p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            color: rgba(140, 140, 140, 1);
+
+            & a {
+                color: rgba(140, 140, 140, 1);
+                text-decoration: none;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: " ";
+                    width: 100%;
+                    height: 1px;
+                    bottom: -1px;
+                    left: 0;
+                    background:rgba(140, 140, 140, 1);
+                }
+            }
+        }
+    }
 
     .gridContainer {
         display: grid;
         grid-template-columns: 300px 290px 1fr;
         gap: 64px;
+        position: relative;
     }
 
     .mobileBox {
@@ -22,9 +57,29 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            & h6 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                color: #FFF;
+                margin: 0 0 5px 0;
+            }
+
+            & p {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                color: rgba(140, 140, 140, 1);
+                margin: 0 0 6px 0;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
         }
     }
-    
+
     .info {
         display: flex;
         justify-content: space-between;
@@ -39,6 +94,7 @@
 
     .socialMedia {
         display: flex;
+
         a {
             color: #fff;
             margin-right: 10px;
@@ -53,7 +109,7 @@
             .blogInfo {
                 align-content: center;
                 margin-left: 20px;
-                
+
                 div {
                     display: flex;
                 }
@@ -109,6 +165,7 @@
 @media (max-width: 920px) {
     .footer {
         padding: 40px 42px 95px;
+
         .gridContainer {
             column-gap: 72px;
         }
@@ -126,6 +183,11 @@
 @media (max-width: 768px) {
     .footer {
         padding: 48px 20px 22px;
+
+        .policy {
+            display: none;
+        }
+
         .gridContainer {
             display: none;
         }
