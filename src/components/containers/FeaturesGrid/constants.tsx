@@ -15,7 +15,7 @@ export const features = [
       of tables. Customers will see the
       features of each pricing plan and
       compare them all with ease.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/pricing.svg" />,
     },
     {
       title: "PARALLAX",
@@ -23,7 +23,7 @@ export const features = [
       depth in 2D environments of your site.
       It will definitely make users experience
       better and make the them come back.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/parallax.svg" />,
     },
     {
       title: "SLIDER",
@@ -32,7 +32,7 @@ export const features = [
       with promos, new products, etc.
       Customization options is a perfect
       attention grabber.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/slider.svg" />,
     },
     {
       title: "MEGA MENU",
@@ -42,7 +42,7 @@ export const features = [
       to organize your categories,
       subcategories easily with different
       content showing-off.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/menu.svg" />,
     },
     {
       title: "GOOGLE MAP",
@@ -51,7 +51,7 @@ export const features = [
       will help your clients find out the
       shortest route to your location in no
       time.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/map.svg" />,
     },
     {
       title: "GOOGLE FONTS",
@@ -59,7 +59,7 @@ export const features = [
       web. Having a decent library of fonts
       that are easy to implement Google
       creates a look for every site.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/fonts.svg" />,
     },
     {
       title: "THEME COLOR SWITCHER",
@@ -68,7 +68,7 @@ export const features = [
       customization tool will let you keep
       your site inline with your corporate
       identity.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/switcher.svg" />,
     },
     {
       title: "ADVANCED SEARCH",
@@ -76,7 +76,7 @@ export const features = [
       allows visitors to find any products in
       just seconds. Our templates include
       this feature right from the package.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/search.svg" />,
     },
     {
       title: "CONTACT FORM",
@@ -84,20 +84,20 @@ export const features = [
       customers can easily get in touch with
       you. inquire more information about
       your services and give their feedback.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/contact.svg" />,
     },
     {
       title: "NEWSLETTER SUBSCRIPTION",
       description: `Easily subscribe your visitors to your
       newsletter.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/newsletter.svg" />,
     },
     {
       title: "SOCIAL LOGIN",
       description: `Let your customers log-in using their
       Facebook or Google account details in
       a neat dropdown.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/social.svg" />,
     },
     {
       title: "UI ELEMENTS",
@@ -105,7 +105,7 @@ export const features = [
       site with lots of Ul elements from lists,
       block quotes and accordions to pricing
       tables, progress bars and counters.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/elements.svg" />,
     },
     {
       title: "VALID SEMANTIC CODING",
@@ -113,7 +113,7 @@ export const features = [
       site will have better SEO ratings,
       impress your visitors with faster page
       loading speeds and get more flexible.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/semantic.svg" />,
     },
     {
       title: "ONLINE CHAT",
@@ -121,7 +121,7 @@ export const features = [
       with customers and visitors and answer
       them immediately in real time. It is
       extremely useful for online stores.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/chat.svg" />,
     },
     {
       title: "PORTFOLIO",
@@ -129,6 +129,6 @@ export const features = [
       possible way with the help of Portfolio.
       Add your photos, projects or products
       you want to share with the visitors.`,
-      icon: <FeatureIcon path="/appoinment.svg" />,
+      icon: <FeatureIcon path="/portfolio.svg" />,
     }
   ];

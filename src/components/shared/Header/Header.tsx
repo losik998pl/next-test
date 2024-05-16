@@ -1,54 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { Box, Container, Typography } from '@mui/material';
 import styles from './header.module.scss';
-import TabPanel from "../TabPanel/TabPanel";
+import { NewTabPanel } from "../TabPanel/TabPanel";
 import Logo from "../Logo/Logo";
+import classNames from 'classnames';
 
 const Header = () => {
+  const [isNavVisible, setNavVisible] = useState(false);
+
+  const toggleNav = () => {
+    setNavVisible(!isNavVisible);
+  };
+
   return (
     <AppBar position="static" elevation={0} component="header" classes={{ root: styles.appBar }}>
       <Container maxWidth="xl" style={{ padding: 0 }}>
-        <Box component={'div'} className={styles.mobileBox}>
+        <Box component={'div'} className={styles.mobileBox} onClick={toggleNav}>
           <Image src="/burgerIcon.svg" alt="My Icon" width={52} height={56} />
-          <Typography className={styles.burgerMenuSignature} component={'p'}>Features</Typography>
+          <Typography className={styles.burgerMenuSignature} component={'p'}>MENU</Typography>
         </Box>
         <Toolbar disableGutters className={styles.toolbar}>
           <Link href="/" passHref>
             <Logo mode="light"/>
-            {/* <div className={styles.logoContainer}>
-            <Image
-              src="/logo.png"
-              alt="Logo X"
-              className={styles.logoX}
-              width={78}
-              height={72}
-            //   priority
-            />
-            <div className={styles.logoTextBox}>
-            <Image
-              src="/jedi_logo.png"
-              alt="Jedi Logo"
-              className={styles.logoX}
-              width={72}
-              height={38}
-            //   priority
-            />
-            <Typography variant="h6" component="p" className={styles.logoTypography}>
-              May the Joomla be with you
-            </Typography>
-            </div>
-            </div> */}
           </Link>
-          <nav className={styles.navContainer}>
-            <TabPanel tabs={['Home', 'Features', 'Portfolio', 'Blog']} />
-            {/* <Button color="inherit" component={Link} href="/">Home</Button>
-            <Button color="inherit" component={Link} href="/features">Features</Button>
-            <Button color="inherit" component={Link} href="/portfolio">Portfolio</Button>
-            <Button color="inherit" component={Link} href="/blog">Blog</Button> */}
+          <nav className={classNames(styles.navContainer, {[styles.navContainerHidden]:!isNavVisible})}>
+            <NewTabPanel tabs={['Home', 'Features', 'Portfolio', 'Blog']} />
           </nav>
         </Toolbar>
       </Container>

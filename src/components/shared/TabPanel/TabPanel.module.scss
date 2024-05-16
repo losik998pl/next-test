@@ -1,21 +1,62 @@
-.tabs {
-  button[aria-selected="true"] {
-    color: rgba(0, 0, 0, 1);
-  }
-  min-height: 30px;
+// .tabs {
+//   button[aria-selected="true"] {
+//     color: rgba(0, 0, 0, 1);
+//   }
+//   min-height: 30px;
 
-  & > div > span {
-    background-color: rgba(23, 191, 191, 1);
-  }
-}
+//   & > div > span {
+//     background-color: rgba(23, 191, 191, 1);
+//   }
+// }
 
-.tab {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 19.5px;
-  letter-spacing: 0.699999988079071px;
-  color: rgba(0, 0, 0, 1);
-  box-sizing: border-box;
-  padding: 3px 15px;
-  min-height: 30px;
+// .tab {
+//   font-size: 13px;
+//   font-weight: 700;
+//   line-height: 19.5px;
+//   letter-spacing: 0.699999988079071px;
+//   color: rgba(0, 0, 0, 1);
+//   box-sizing: border-box;
+//   padding: 3px 15px;
+//   min-height: 30px;
+// }
+
+.tabPanel {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .button {
+    flex-grow: 1;
+    position: relative;
+    text-transform: none;
+    width: min-content;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .active {
+    color: black;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background-color: #17BFBF;
+    }
+  }
+
+  .inactive {
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

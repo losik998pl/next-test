@@ -5,34 +5,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import classNames from 'classnames';
 
 import fileStyles from './TabPanel.module.scss'
-
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
-
-function CustomTabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
 
 function a11yProps(index: number) {
   return {
@@ -42,24 +18,44 @@ function a11yProps(index: number) {
 }
 
 interface TabsProps {
-  styles?: { [key: string]: string };
+  className?: string;
   tabs: string[];
 }
 
-export default function TabPanel({ tabs, styles }: TabsProps) {
+// export default function TabPanel({ tabs, styles }: TabsProps) {
+//   const [value, setValue] = React.useState(0);
+
+//   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+//     setValue(newValue);
+//   };
+
+//   return (
+//     <Box sx={{ width: '100%' }}>
+//       <Box>
+//         <Tabs value={value} onChange={handleChange} className={fileStyles.tabs} centered>
+//           {tabs.map((tabName, index) => (<Tab className={fileStyles.tab} label={tabName} key={tabName} {...a11yProps(index)} />))}
+//         </Tabs>
+//       </Box>
+//     </Box>
+//   );
+// }
+
+export function NewTabPanel({ tabs, className = '' }: TabsProps) {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
-
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box>
-        <Tabs value={value} onChange={handleChange} className={fileStyles.tabs} centered>
-          {tabs.map((tabName, index) => (<Tab className={fileStyles.tab} label={tabName} key={tabName} {...a11yProps(index)} />))}
-        </Tabs>
-      </Box>
+    // <Box className={`${fileStyles.tabPanel} ${className}`}>
+    <Box className={classNames(fileStyles.tabPanel, className)}>
+      {tabs.map((tabName, index) => (
+        <Button
+          variant='text'
+          className={value === index ? fileStyles.active : fileStyles.inactive}
+          key={tabName}
+          onClick={() => setValue(index)}
+        >
+          {tabName}
+        </Button>
+      ))}
     </Box>
   );
 }

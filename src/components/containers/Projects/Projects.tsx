@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box, Button, Typography, Grid } from '@mui/material';
-import TabPanel from '@/components/shared/TabPanel/TabPanel';
+import { NewTabPanel } from '@/components/shared/TabPanel/TabPanel';
 
 const categories = ["All", "Business", "Creative", "Portfolio", "Blog", "Infrastructure", "Industrial", "Other"];
 const projects = ["/project0.png", "/project1.png", "/project2.png"];
@@ -17,22 +17,7 @@ const Projects: React.FC = () => {
             <Typography variant="subtitle1" className={styles.subtitle}>
                 Check out other themes based on <span>JEDI</span>
             </Typography>
-            <TabPanel tabs={categories}/>
-            {/* <Box sx={{ mt: 2, mb: 4, display: 'flex', justifyContent: 'center' }}>
-                {categories.map((category) => (
-                    <Button
-                        key={category}
-                        onClick={() => handleCategoryClick(category)}
-                        sx={{
-                            mx: 1,
-                            color: selectedCategory === category ? 'primary.main' : 'text.primary',
-                            fontWeight: selectedCategory === category ? 'bold' : 'normal'
-                        }}
-                    >
-                        {category}
-                    </Button>
-                ))}
-            </Box> */}
+            <NewTabPanel tabs={categories} className={styles.projectTabs}/>
             <Box gap={0} sx={{marginTop: 6}}>
                 {projects.map((project) => <Image src={project} alt={project} key={project} width={432} height={332} className={styles.image}/>)}
             </Box>
