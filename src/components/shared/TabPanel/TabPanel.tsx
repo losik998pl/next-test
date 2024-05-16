@@ -50,9 +50,9 @@ export function NewTabPanel({ tabs, className = '', mode = 'color' }: TabsProps)
         <Button
           variant='text'
           className={classNames(
-            {[fileStyles.inactiveColor]: mode === 'color'}, 
+            {[fileStyles.inactiveColor]: value !== index && mode === 'color'}, 
             {[fileStyles.activeColor]: value === index && mode === 'color'}, 
-            {[fileStyles.inactiveMono]: mode === 'mono'}, 
+            {[fileStyles.inactiveMono]: value !== index && mode === 'mono'}, 
             {[fileStyles.activeMono]: value === index && mode === 'mono'}, 
           )}
           key={tabName}
