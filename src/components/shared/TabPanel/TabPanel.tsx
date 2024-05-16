@@ -20,6 +20,7 @@ function a11yProps(index: number) {
 interface TabsProps {
   className?: string;
   tabs: string[];
+  mode?: 'color' | 'mono'
 }
 
 // export default function TabPanel({ tabs, styles }: TabsProps) {
@@ -40,16 +41,20 @@ interface TabsProps {
 //   );
 // }
 
-export function NewTabPanel({ tabs, className = '' }: TabsProps) {
+export function NewTabPanel({ tabs, className = '', mode = 'color' }: TabsProps) {
   const [value, setValue] = React.useState(0);
 
   return (
-    // <Box className={`${fileStyles.tabPanel} ${className}`}>
     <Box className={classNames(fileStyles.tabPanel, className)}>
       {tabs.map((tabName, index) => (
         <Button
           variant='text'
-          className={value === index ? fileStyles.active : fileStyles.inactive}
+          className={classNames(
+            {[fileStyles.inactiveColor]: mode === 'color'}, 
+            {[fileStyles.activeColor]: value === index && mode === 'color'}, 
+            {[fileStyles.inactiveMono]: mode === 'mono'}, 
+            {[fileStyles.activeMono]: value === index && mode === 'mono'}, 
+          )}
           key={tabName}
           onClick={() => setValue(index)}
         >

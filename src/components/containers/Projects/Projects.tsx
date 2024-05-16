@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
             <Typography variant="subtitle1" className={styles.subtitle}>
                 Check out other themes based on <span>JEDI</span>
             </Typography>
-            <NewTabPanel tabs={categories} className={styles.projectTabs}/>
+            <NewTabPanel tabs={categories} mode={'mono'}/>
             <Box gap={0} sx={{marginTop: 6}}>
                 {projects.map((project) => <Image src={project} alt={project} key={project} width={432} height={332} className={styles.image}/>)}
             </Box>

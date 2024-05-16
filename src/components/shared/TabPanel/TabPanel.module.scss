@@ -37,8 +37,8 @@
     }
   }
 
-  .active {
-    color: black;
+  .activeColor {
+    color: rgba(0, 0, 0, 1);
 
     &::after {
       content: '';
@@ -52,8 +52,27 @@
     }
   }
 
-  .inactive {
+  .inactiveColor {
     color: black;
+  }
+
+  .activeMono {
+    color: rgba(0, 0, 0, 1);
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background-color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  .inactiveMono {
+    color: rgba(110, 110, 110, 1);
   }
 
   @media (max-width: 768px) {

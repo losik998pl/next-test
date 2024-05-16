@@ -9,8 +9,8 @@ import ContactForm from "../ContactForm/ContactForm";
 const Footer: React.FC = () => {
   return (
     <Box className={styles.footer}>
-      <Grid container spacing={9}>
-        <Grid item xs={12} sm={4}>
+      <Grid container className={styles.gridContainer}>
+        <Grid item >
           <Logo mode="dark" />
           <Box className={styles.info}>
             <Box className={styles.infoItem}>
@@ -47,13 +47,13 @@ const Footer: React.FC = () => {
             </Link>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item>
           <Typography variant="h6" gutterBottom>
             Latest From the Blog
           </Typography>
           <Box className={styles.blog}>
             <Box className={styles.blogItem}>
-            <Image width={62} height={62} src="/blog0.png" alt="Blog" />
+              <Image width={62} height={62} src="/blog0.png" alt="Blog" />
               <Box className={styles.blogInfo}>
                 <Box>
                   <Image
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               </Box>
             </Box>
             <Box className={styles.blogItem}>
-            <Image width={62} height={62} src="/blog1.png" alt="Blog" />
+              <Image width={62} height={62} src="/blog1.png" alt="Blog" />
               <Box className={styles.blogInfo}>
                 <Box>
                   <Image
@@ -102,10 +102,27 @@ const Footer: React.FC = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item>
           <ContactForm />
         </Grid>
       </Grid>
+      <Box component={'div'} className={styles.mobileBox}>
+        <Logo mode={"dark"} direction={'column'} />
+        <Box component={'div'} className={styles.adressBox}>
+          <Typography variant="h6">
+            Address:
+          </Typography>
+          <Typography>
+            28 Jackson Btvd Ste
+          </Typography>
+          <Typography>
+            1020 Chicago
+          </Typography>
+          <Typography>
+            IL 60604-2340
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 };
